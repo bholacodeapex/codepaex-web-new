@@ -5,7 +5,6 @@ import React from 'react'
 import { fileURLToPath } from 'url'
 
 import config from '@/payload.config'
-import './styles.css'
 import HeroSection from '@/components/HomePage/landing/HeroSection'
 import SkillSection from '@/components/HomePage/landing/SkillSection'
 import Testimonials from '@/components/HomePage/landing/Testimonials'
