@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import "./Header.css";
@@ -14,7 +13,7 @@ function Navbar() {
                         <div className="flex justify-between items-center">
                             <a href="/">
                                 <Image
-                                    src={process.env.PUBLIC_URL + "/Images/logos/CodeApex Logo Horizontal.png"}
+                                    src={"/Images/logos/CodeApex_Logo_Horizontal.png"}
                                     className="w-[150px] max-w-[150px]"
                                     width={150}
                                     height={150}
