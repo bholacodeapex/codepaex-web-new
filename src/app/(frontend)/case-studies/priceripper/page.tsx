@@ -65,25 +65,30 @@ export default async function Page({ params: { slug = "home" } }) {
   return (
     <div className="h-full flex flex-col py-12 sm:py-16 md:py-20">
       {/* Hero Section - Fixed gradient for Tailwind v4 */}
-      <div className="text-black w-full min-h-[32rem] sm:min-h-[36rem] md:h-[40rem] lg:h-[44rem] xl:h-[48rem] bg-radial-[ellipse_at_top] from-[#f43271] via-[#ff7f96] to-[#f43271] px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto flex flex-col h-full">
+      <div className="text-white w-full min-h-[32rem] sm:min-h-[36rem] md:h-[40rem] lg:h-[44rem] xl:h-[48rem] px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f43271] via-[#ff7f96] to-[#f43271] animate-gradient-xy"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:20px_20px]"></div>
+
+        <div className="container mx-auto flex flex-col h-full relative z-10">
           <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-12 sm:mt-16 md:mt-20 lg:mt-24 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
             <Breadcrumbs
               items={breadcrumbItems}
-              childClass="text-black"
+              childClass="text-white/90"
               className="justify-center"
             />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-medium max-w-6xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold max-w-6xl mx-auto drop-shadow-2xl">
               Priceripper: Your Product Price Comparison Assistant
             </h1>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-black/80 text-sm sm:text-base bg-black/5 hover:bg-black/10 transition-colors">
+              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-white/80 text-sm sm:text-base bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white font-medium">
                 Full-stack Development
               </div>
-              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-black/80 text-sm sm:text-base bg-black/5 hover:bg-black/10 transition-colors">
+              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-white/80 text-sm sm:text-base bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white font-medium">
                 Search Engine Optimization
               </div>
-              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-black/80 text-sm sm:text-base bg-black/5 hover:bg-black/10 transition-colors">
+              <div className="py-1.5 sm:py-2 px-4 sm:px-6 rounded-full border border-white/80 text-sm sm:text-base bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white font-medium">
                 Web Development
               </div>
             </div>
@@ -92,7 +97,7 @@ export default async function Page({ params: { slug = "home" } }) {
       </div>
 
       {/* Main Content Container */}
-      <div className="h-full mx-auto container flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-8xl">
+      <div className="h-full z-12 mx-auto container flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 lg:px-8 max-w-8xl">
         {/* Hero Image */}
         <Image
           src={"/Images/projects/priceripper/priceripper-comparision.jpeg"}
@@ -234,7 +239,6 @@ export default async function Page({ params: { slug = "home" } }) {
         </div>
 
         {/* Key Features Section - With Price Ripper Gradient Theme */}
-        {/* Key Features Section - With Verify Button Animation */}
         <div className="flex flex-col xl:flex-row mt-16 sm:mt-20 lg:mt-24 gap-12 sm:gap-16 xl:gap-24">
           {/* Section Header */}
           <div className="xl:w-1/3 text-center xl:text-left">
@@ -254,16 +258,13 @@ export default async function Page({ params: { slug = "home" } }) {
             </div>
           </div>
 
-          {/* Features Grid - With Verify Button */}
+          {/* Features Grid - With Price Ripper Gradient Hover */}
           <div className="xl:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
             {keyFeatures.map((ele, index) => (
               <div
                 key={index}
-                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-7 lg:p-8 hover:bg-gradient-to-br hover:from-[#f43271] hover:via-[#ff7f96] hover:to-[#f43271] transition-all duration-500 ease-out shadow-lg hover:shadow-2xl border border-gray-200/50 hover:border-transparent overflow-hidden"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-7 lg:p-8 hover:bg-gradient-to-br hover:from-[#f43271] hover:via-[#ff7f96] hover:to-[#f43271] transition-all duration-500 ease-out shadow-lg hover:shadow-xl border border-gray-200/50 hover:border-transparent"
               >
-                {/* Animated Shine Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-
                 {/* Feature Number */}
                 <div className="absolute top-4 sm:top-5 lg:top-6 right-4 sm:right-5 lg:right-6 text-4xl sm:text-5xl lg:text-6xl font-black text-gray-100 group-hover:text-white/20 transition-colors duration-500">
                   {String(index + 1).padStart(2, '0')}
@@ -296,39 +297,12 @@ export default async function Page({ params: { slug = "home" } }) {
                     {ele.desc}
                   </p>
                 </div>
-
-                {/* Verify Button - Appears on hover with checkmark animation */}
-                <div className="mt-4 sm:mt-5 lg:mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                  <button className="inline-flex items-center text-white font-semibold text-xs sm:text-sm bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300 group/btn">
-                    <span>Verify feature</span>
-                    <div className="relative w-5 h-5 ml-2">
-                      {/* Checkmark icon with scale animation */}
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5 absolute inset-0 transform group-hover/btn:scale-110 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    {/* Ripple effect on hover */}
-                    <span className="absolute inset-0 rounded-full bg-white/0 group-hover/btn:bg-white/20 transition-all duration-500 scale-0 group-hover/btn:scale-100"></span>
-                  </button>
-                </div>
-
-                {/* Verified Badge - Alternative version that appears instead of button */}
-                {/* <div className="mt-4 sm:mt-5 lg:mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <span className="inline-flex items-center text-white text-xs sm:text-sm bg-emerald-500/30 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-            <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-5m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Verified feature
-          </span>
-        </div> */}
               </div>
             ))}
           </div>
-        </div>
 
+
+        </div>
       </div>
     </div>
   );

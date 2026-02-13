@@ -100,7 +100,7 @@ export default async function Page({ params: { slug = "home" } }) {
                     width={1600}
                     height={900}
                     priority
-                    className="w-full h-auto rounded-xl sm:rounded-2xl -mt-16 sm:-mt-24 md:-mt-32 lg:-mt-40 xl:-mt-48 border shadow-lg"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl -mt-16 sm:-mt-24 md:-mt-32 border shadow-lg"
                 />
 
                 {/* About Grid - Responsive Cards */}
@@ -294,22 +294,6 @@ export default async function Page({ params: { slug = "home" } }) {
                                     <p className="text-gray-600 group-hover:text-white/90 text-xs sm:text-sm lg:text-base leading-relaxed transition-all duration-300">
                                         {ele.desc}
                                     </p>
-                                </div>
-
-                                {/* Verify Button - Appears on hover */}
-                                <div className="mt-4 sm:mt-5 lg:mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                                    <button className="inline-flex items-center text-white font-semibold text-xs sm:text-sm bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300 group/btn">
-                                        <span>Verify feature</span>
-                                        <div className="relative w-5 h-5 ml-2">
-                                            <svg className="w-4 h-4 sm:w-5 sm:h-5 absolute inset-0 transform group-hover/btn:scale-110 transition-transform duration-300"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <span className="absolute inset-0 rounded-full bg-white/0 group-hover/btn:bg-white/20 transition-all duration-500 scale-0 group-hover/btn:scale-100"></span>
-                                    </button>
                                 </div>
 
                                 {/* Accent border with Surge Party yellow */}
