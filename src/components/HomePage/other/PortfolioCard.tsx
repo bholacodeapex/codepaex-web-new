@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function PortfolioCard(props: any) {
@@ -49,12 +50,12 @@ function PortfolioCard(props: any) {
                         <p className="text-center w-4/5 text-[#eaeaea] my-5 lg:text-[0.85rem] xl:text-[1rem]">
                             {props.projectText}
                         </p>
-                        <a
+                        <Link
                             href={props.href}
                             className={`p-2 lg:px-4 md:mx-2 text-[#864AF9] hover:text-[#eaeaea] rounded-[0.7rem] border border-[#864AF9] transition duration-500 ease-out red-button`}
                         >
                             View Case Study
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

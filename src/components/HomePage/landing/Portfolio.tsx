@@ -42,7 +42,7 @@ function Portfolio() {
                         projectText={
                             "Navigate the Savings Sea: Dive Deep into Price Comparisons to Surface with Unbeatable Deals!"
                         }
-                        href={"https://www.priceripper.co.uk/"}
+                        href={"/case-studies/priceripper"}
                         image={PriceBack}
                     />
                     <PortfolioCard
@@ -51,14 +51,14 @@ function Portfolio() {
                         projectText={
                             "Web version of Surge Party to send invitations to those who doesn't have the app."
                         }
-                        href={"https://surgeparty.com/events/36/"}
+                        href={"case-studies/surge-party-social-media"}
                         image={SurgeBranding}
                     />
                     <PortfolioCard
                         projectName={""}
                         icon={MadklubennLogo}
                         alt={"Madklubenn Image"}
-                        href={"https://www.madklubben.dk/"}
+                        href={"/case-studies/madklubben"}
                         projectText={
                             "Madklubben operates over 40 dining establishments throughout Denmark, offering a variety of business lunch solutions and catering services."
                         }
@@ -69,7 +69,7 @@ function Portfolio() {
                         projectText={
                             "Where Your Business Dreams Flourish: The Cozy Corner for Renting Your Online Shop – Simple, Friendly, Yours"
                         }
-                        href={"https://www.hazecart.com/"}
+                        href={"/case-studies/priceripper"}
                         alt={"Hazecart Image"}
                         image={Hazecart}
                     />

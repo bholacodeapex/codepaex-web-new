@@ -13,7 +13,7 @@ export default async function HomePage() {
       <SkillSection />
       <Testimonials />
       <Portfolio />
-      <EcomPortfolio />
+      {/* <EcomPortfolio /> */}
     </>
   )
 }

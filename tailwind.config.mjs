@@ -1,4 +1,4 @@
-
+/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         './pages/**/*.{ts,tsx}',
@@ -8,6 +8,6 @@ export default {
     ],
     plugins: [
         require('tailwindcss-animate'),
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
     ],
 }
